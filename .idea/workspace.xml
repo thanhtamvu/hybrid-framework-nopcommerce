@@ -4,17 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda2e242-fa59-4cc5-a9cc-b5fe35afcb44" name="Changes" comment="" />
+    <list default="true" id="dda2e242-fa59-4cc5-a9cc-b5fe35afcb44" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resouces/LocalRunner" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resouces/runNopCommerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_01_Register_DRY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/comNopCommercesData/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/comNopcommerAdmin/a.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="XML Properties File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2VI0Y10MarXAkqdEQH1zSUHgMCE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,9 +43,170 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "D:/Selenium/test3/hybrid-framework-nopcommerce",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39770114"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce" />
+      <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce\actions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce\resouces" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Level_01_Register_DRY">
+    <configuration name="aaa" type="JUnit" factoryName="JUnit">
+      <module name="hybrid-framework-nopcommerce" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.LocalRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -D @Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_01_Register_DRY" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
+      <option name="METHOD_NAME" value="TC_03_Register_Password_Less_Than_6_Chars" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_01_Register_DRY.TC_03_Register_Success" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
+      <option name="METHOD_NAME" value="TC_03_Register_Success" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
+      <option name="METHOD_NAME" value="TC_04_Register_Invalid_Confirm_Password" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
+      <option name="METHOD_NAME" value="TC_05_Register_Password_Less_Than_6_Chars" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="a" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comNopcommerAdmin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="comNopcommerAdmin" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerAdmin.a" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.aaa" />
+      <item itemvalue="TestNG.Level_01_Register_DRY" />
+      <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
+      <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Success" />
+      <item itemvalue="TestNG.Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" />
+      <item itemvalue="TestNG.Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Level_01_Register_DRY" />
+        <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
+        <item itemvalue="TestNG.Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" />
+        <item itemvalue="TestNG.Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" />
+        <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Success" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

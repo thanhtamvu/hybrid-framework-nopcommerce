@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name = "NopCommerce" >
+    <test  name="Test">
+
+    <classes>
+
+        <class name = "comNopcommerceUser.Level_01_Register_DRY" />
+
+
+    </classes>
+  </test>
+</suite>
