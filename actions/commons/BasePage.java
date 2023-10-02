@@ -1,12 +1,12 @@
-package commons;
+package actions.commons;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Set;
 
 public class BasePage {
@@ -95,8 +95,16 @@ public class BasePage {
         }
     }
 
+    public By getByXpath (String xpathLocator){
+        return By.xpath(xpathLocator);
+    }
+
     public WebElement getWebElement(WebDriver driver, String xpathLocator){
-       return driver.findElement(By.xpath(xpathLocator));
+       return driver.findElement(getByXpath(xpathLocator));
+    }
+
+    public List<WebElement> getListWebElement(WebDriver driver, String xpathlocator){
+        return  driver.findElements(getByXpath(xpathlocator));
     }
 
     public void clickToElement(WebDriver driver, String xpathLocator){
@@ -104,13 +112,86 @@ public class BasePage {
     }
 
     public void sendkeyToElement(WebDriver driver, String xpathLocator, String textValue){
-        getWebElement(driver,xpathLocator).clear();
-        getWebElement(driver,xpathLocator).sendKeys(textValue);
+        WebElement element = getWebElement(driver,xpathLocator);
+        element.clear();
+        element.sendKeys(textValue);
     }
 
     public String getElementText(WebDriver driver, String xpathLocator){
        return getWebElement(driver,xpathLocator).getText();
     }
+
+    public void selectItemInDefaultDropdown(WebDriver driver, String xpathLocator, String textItem){
+        Select select = new Select(getWebElement(driver,xpathLocator));
+        select.selectByValue(textItem);
+    }
+
+    public String getFirstSelectedItemDefaultDropdown(WebDriver driver, String xpathLocator){
+        Select select = new Select(getWebElement(driver,xpathLocator));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public boolean isDropdownMultiple(WebDriver driver, String xpathLocator){
+     Select select = new Select(getWebElement(driver, xpathLocator));
+     return select.isMultiple();
+    }
+
+    public void sleepInSecond(long time){
+        try {
+            Thread.sleep(time*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+    public void selectItemInDropdown(WebDriver driver, String parentXpath, String childXpath, String exptext){
+
+        getWebElement(driver,parentXpath).click();
+        sleepInSecond(1);
+
+        WebDriverWait expliciwait = new WebDriverWait(driver,30);
+
+        List <WebElement> allItems = expliciwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childXpath)));
+
+        for (WebElement item : allItems) {
+            if (item.getText().trim().equals(exptext)){
+                JavascriptExecutor jstExecutor = (JavascriptExecutor) driver;
+                jstExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
+                sleepInSecond(1);
+                item.click();
+                break;
+            }
+        }
+
+    }
+
+
+    public String getElementAttribute(WebDriver driver, String xpathLocator, String attributeName){
+        return getWebElement(driver,xpathLocator).getAttribute(attributeName);
+    }
+
+    public String getElementCssValue(WebDriver driver, String xpathLocator, String propertyName){
+        return  getWebElement(driver,xpathLocator).getCssValue(propertyName);
+    }
+
+
+    public String GetHexaColorFromRgba(String rgbaValue){
+        return Color.fromString(rgbaValue).asHex();
+    }
+
+    public int getElementSize(WebDriver driver, String xpathLocator){
+
+        return getListWebElement(driver,xpathLocator).size();
+    }
+
+
+
+
+
+
+
 
 
 
