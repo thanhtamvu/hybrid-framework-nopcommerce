@@ -6,17 +6,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Set;
 
 public class BasePage {
 
-
     //Open URL
     public void openPageUrl(WebDriver driver, String pageUrl){
         driver.get(pageUrl);
-
     }
 
     public String getPageTitle(WebDriver driver ){
@@ -95,7 +93,6 @@ public class BasePage {
         }
     }
 
-
     public void closeAllOpeningTabsExceptTheFirst(WebDriver driver){
 
         while(driver.getWindowHandles().size() > 1){
@@ -107,12 +104,16 @@ public class BasePage {
 
     }
 
+    public By getByXpath (String xpathLocator){
+        return By.xpath(xpathLocator);
+    }
+
     public WebElement getWebElement(WebDriver driver, String xpathLocator){
        return driver.findElement(getByXpath(xpathLocator));
     }
 
-    public List<WebElement> getListElement(WebDriver driver, String xpathLocator){
-        return driver.findElements(getByXpath(xpathLocator));
+    public List<WebElement> getListWebElement(WebDriver driver, String xpathlocator){
+        return  driver.findElements(getByXpath(xpathlocator));
     }
 
     public void clickToElement(WebDriver driver, String xpathLocator){
@@ -120,7 +121,6 @@ public class BasePage {
     }
 
     public void sendkeyToElement(WebDriver driver, String xpathLocator, String textValue){
-
         WebElement element = getWebElement(driver,xpathLocator);
         element.clear();
         element.sendKeys(textValue);
@@ -130,23 +130,19 @@ public class BasePage {
        return getWebElement(driver,xpathLocator).getText();
     }
 
-
-    public void selectItemInDefaultDropdown(WebDriver driver, String xpathlocator, String visibleText){
-        Select select = new Select(getWebElement(driver,xpathlocator));
-        select.selectByVisibleText(visibleText);
+    public void selectItemInDefaultDropdown(WebDriver driver, String xpathLocator, String textItem){
+        Select select = new Select(getWebElement(driver,xpathLocator));
+        select.selectByValue(textItem);
     }
-
 
     public String getFirstSelectedItemDefaultDropdown(WebDriver driver, String xpathLocator){
         Select select = new Select(getWebElement(driver,xpathLocator));
-
-        return  select.getFirstSelectedOption().getText();
-
+        return select.getFirstSelectedOption().getText();
     }
 
-    public boolean isdropdownMultiple(WebDriver driver, String xpathLocator){
-        Select select = new Select(getWebElement(driver,xpathLocator));
-        return  select.isMultiple();
+    public boolean isDropdownMultiple(WebDriver driver, String xpathLocator){
+     Select select = new Select(getWebElement(driver, xpathLocator));
+     return select.isMultiple();
     }
 
     public void sleepInSecond(long time){
@@ -157,59 +153,50 @@ public class BasePage {
         }
     }
 
-    public void selectItemInCustomDropdown(WebDriver driver, String xpathLocator, String expectedTextItem ){
 
-        getWebElement(driver,xpathLocator).click();
 
+    public void selectItemInDropdown(WebDriver driver, String parentXpath, String childXpath, String exptext){
+
+        getWebElement(driver,parentXpath).click();
         sleepInSecond(1);
 
-        WebDriverWait explicitwait = new WebDriverWait(driver,30);
+        WebDriverWait expliciwait = new WebDriverWait(driver,30);
 
-        List <WebElement> allItems  = explicitwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(xpathLocator)));
+        List <WebElement> allItems = expliciwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childXpath)));
 
-        for (WebElement item : allItems){
-            if(item.getText().trim().equals(expectedTextItem)){
-                JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-                jsExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
+        for (WebElement item : allItems) {
+            if (item.getText().trim().equals(exptext)){
+                JavascriptExecutor jstExecutor = (JavascriptExecutor) driver;
+                jstExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
                 sleepInSecond(1);
                 item.click();
                 break;
-
             }
         }
 
     }
 
 
-    public By getByXpath(String xpathLocator){
-        return  By.xpath(xpathLocator);
-    }
-
-
     public String getElementAttribute(WebDriver driver, String xpathLocator, String attributeName){
-
-        return  getWebElement(driver,xpathLocator).getAttribute(attributeName);
-
+        return getWebElement(driver,xpathLocator).getAttribute(attributeName);
     }
-
 
     public String getElementCssValue(WebDriver driver, String xpathLocator, String propertyName){
-        return  getWebElement(driver, xpathLocator).getCssValue(propertyName);
+        return  getWebElement(driver,xpathLocator).getCssValue(propertyName);
     }
 
 
-    public  String getHexaColorFromRGBA(String rgbaValue){
+    public String GetHexaColorFromRgba(String rgbaValue){
         return Color.fromString(rgbaValue).asHex();
     }
 
     public int getElementSize(WebDriver driver, String xpathLocator){
 
-        return getListElement(driver, xpathLocator).size();
-
+        return getListWebElement(driver,xpathLocator).size();
     }
 
     public void checkOrUncheckToDefaultCheckboxRadio(WebDriver driver, String xpathLocator,String expText, String checkOrUncheck){
-        List<WebElement> elements = getListElement(driver, xpathLocator);
+        List<WebElement> elements = getListWebElement(driver, xpathLocator);
 
         for (WebElement item : elements){
             if(checkOrUncheck.equalsIgnoreCase("check")){
@@ -223,6 +210,5 @@ public class BasePage {
             }
         }
     }
-
 
 }
