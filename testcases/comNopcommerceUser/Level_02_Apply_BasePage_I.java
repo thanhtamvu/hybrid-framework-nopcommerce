@@ -59,18 +59,32 @@ public class Level_02_Apply_BasePage_I {
 
     }
 
-   // @Test
+    @Test
     public void TC_02_Invalid_Email(){
-        driver.findElement(By.xpath("//a[@class='ico-register']")).click();
-        driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys("Automation");
-        driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("FC");
-        driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("123@456#%*");
-        driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("123456");
-        driver.findElement(By.xpath("//input[@id='ConfirmPassword']")).sendKeys("123456");
 
-        driver.findElement(By.xpath("//button[@id='register-button']")).click();
+        basePage.waitForElementClickable(driver,"//a[@class='ico-register']");
+        basePage.clickToElement(driver,"//a[@class='ico-register']");
 
-        Assert.assertEquals(driver.findElement(By.xpath("//span[@id='Email-error']")).getText(),"Wrong email");
+        basePage.waitForElementVisible(driver,"//input[@id='FirstName']");
+        basePage.inputToElement(driver,"//input[@id='FirstName']","Automation");
+
+        basePage.waitForElementVisible(driver,"//input[@id='LastName']");
+        basePage.inputToElement(driver,"//input[@id='LastName']","FC");
+
+        basePage.waitForElementVisible(driver,"//input[@id='Email']");
+        basePage.inputToElement(driver,"//input[@id='Email']","1234567");
+
+        basePage.waitForElementVisible(driver,"//input[@id='Password']");
+        basePage.inputToElement(driver,"//input[@id='Password']","123456");
+
+        basePage.waitForElementVisible(driver,"//input[@id='ConfirmPassword']");
+        basePage.inputToElement(driver,"//input[@id='ConfirmPassword']","123456");
+
+        basePage.waitForElementClickable(driver,"//button[@id='register-button']");
+        basePage.clickToElement(driver,"//button[@id='register-button']");
+
+        basePage.waitForElementVisible(driver,"//span[@id='Email-error']");
+        Assert.assertEquals(basePage.getElementText(driver,"//span[@id='Email-error']"),"Wrong email");
 
     }
 
@@ -140,7 +154,7 @@ public class Level_02_Apply_BasePage_I {
 
     @AfterClass
     public  void closeBrowser(){
-        driver.quit();
+       // driver.quit();
 
     }
 

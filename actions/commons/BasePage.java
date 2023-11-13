@@ -1,6 +1,5 @@
 package commons;
 
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -124,7 +123,7 @@ public class BasePage {
         getWebElement(driver,xpathLocator).click();
     }
 
-    public void sendkeyToElement(WebDriver driver, String xpathLocator, String textValue){
+    public void inputToElement(WebDriver driver, String xpathLocator, String textValue){
         WebElement element = getWebElement(driver,xpathLocator);
         element.clear();
         element.sendKeys(textValue);
@@ -331,7 +330,7 @@ public class BasePage {
     public void waitForElementClickable(WebDriver driver, String xpathLocator){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
-        explicitWait.until(ExpectedConditions.invisibilityOf(getWebElement(driver, xpathLocator)));
+
     }
 
 

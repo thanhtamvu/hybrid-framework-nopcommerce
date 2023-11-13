@@ -1,5 +1,6 @@
 package comNopcommerceUser;
 
+import commons.BasePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_01_Register_DRY {
+public class Level_01_Register_DRY  {
 
     WebDriver driver;
 //    String projectPath = System.getProperty("user.dir");
@@ -37,6 +38,7 @@ public class Level_01_Register_DRY {
     @Test
     public void TC_01_Empty_Data(){
 
+
         driver.findElement(By.xpath("//a[@class='ico-register']")).click();
         driver.findElement(By.xpath("//button[@id='register-button']")).click();
 
@@ -50,6 +52,8 @@ public class Level_01_Register_DRY {
     @Test
     public void TC_02_Invalid_Email(){
         driver.findElement(By.xpath("//a[@class='ico-register']")).click();
+
+
         driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys("Automation");
         driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("FC");
         driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("123@456#%*");

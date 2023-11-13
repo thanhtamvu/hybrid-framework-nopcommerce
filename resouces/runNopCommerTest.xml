@@ -4,8 +4,7 @@
 
     <classes>
 
-        <class name = "comNopcommerceUser.Level_02_Apply_BasePage_I" />
-
+        <class name = "comNopcommerceUser.Level_03_Page_Object" />
 
     </classes>
   </test>
