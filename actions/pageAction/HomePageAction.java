@@ -12,7 +12,8 @@ public class HomePageAction extends BasePage {
         this.driver = driver;
     }
     public void clickToRegisterLink() {
-        waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
-        clickToElement(driver,HomePageUI.REGISTER_LINK);
+        String xpath = String.format(HomePageUI.REGISTER_LINK,"Register");
+        waitForElementClickable(driver, xpath);
+        clickToElement(driver,xpath);
     }
 }

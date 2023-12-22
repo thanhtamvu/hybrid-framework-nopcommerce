@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bd6a04b-be20-4a2b-8fc3-8c722adae6f5" name="Changes" comment="">
+    <list default="true" id="3bd6a04b-be20-4a2b-8fc3-8c722adae6f5" name="Changes" comment="Resolve conflict">
+      <change afterPath="$PROJECT_DIR$/actions/commons/Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/commons/GetPropertiesValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/comNopCommercesData/RegisterPage.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/HomePageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageAction/HomePageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/RegisterPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageAction/RegisterPageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_03_Page_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_03_Page_Object.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +55,26 @@
       <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce\resouces" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Abc">
+  <component name="RunManager" selected="TestNG.Level_03_Page_Object.Register_01_Empty_Data">
     <configuration name="Abc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Abc" />
       <module name="hybrid-framework-nopcommerce" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetPropertiesValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="commons.GetPropertiesValue" />
+      <module name="hybrid-framework-nopcommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="commons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Level_03_Page_Object.Register_01_Empty_Data" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <extension name="coverage">
         <pattern>
@@ -116,26 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="comNopcommerceUser" />
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
-      <option name="METHOD_NAME" value="TC_04_Register_Invalid_Confirm_Password" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-nopcommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="comNopcommerceUser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
-      <option name="METHOD_NAME" value="TC_05_Register_Password_Less_Than_6_Chars" />
+      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_03_Page_Object" />
+      <option name="METHOD_NAME" value="Register_01_Empty_Data" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -144,20 +147,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GetPropertiesValue" />
       <item itemvalue="Application.Abc" />
       <item itemvalue="JUnit.aaa" />
+      <item itemvalue="TestNG.Level_03_Page_Object.Register_01_Empty_Data" />
       <item itemvalue="TestNG.Level_01_Register_DRY" />
       <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
-      <item itemvalue="TestNG.Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" />
-      <item itemvalue="TestNG.Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Level_03_Page_Object.Register_01_Empty_Data" />
+        <item itemvalue="Application.GetPropertiesValue" />
         <item itemvalue="Application.Abc" />
         <item itemvalue="TestNG.Level_01_Register_DRY" />
         <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
-        <item itemvalue="TestNG.Level_01_Register_DRY.TC_04_Register_Invalid_Confirm_Password" />
-        <item itemvalue="TestNG.Level_01_Register_DRY.TC_05_Register_Password_Less_Than_6_Chars" />
       </list>
     </recent_temporary>
   </component>
@@ -170,9 +173,21 @@
       <option name="presentableId" value="Default" />
       <updated>1694508333377</updated>
     </task>
+    <task id="LOCAL-00001" summary="Resolve conflict">
+      <created>1703046051091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703046051091</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Resolve conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve conflict" />
   </component>
 </project>
