@@ -1,9 +1,8 @@
 package testcases.comNopcommerceUser;
 
+import actions.commons.GlobalConstants;
 import actions.commons.PageGeneratorManager;
-import actions.pageAction.CommonPageAction;
-import actions.pageAction.LoginPageAction;
-import actions.pageAction.MyAccountPageAction;
+import actions.pageObjects.nopCommerce.user.*;
 import commons.BasePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageAction.HomePageAction;
-import pageAction.RegisterPageAction;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -23,11 +20,15 @@ public class Level_04_SwitchPage extends BasePage {
 
     private WebDriver driver;
 //    String projectPath = System.getProperty("user.dir");
-    private HomePageAction homePageAction;
-    private RegisterPageAction registerAction;
-    private CommonPageAction commonPageAction;
-    private LoginPageAction loginPageAction;
-    private MyAccountPageAction myAccountPageAction;
+    private UserHomePageAction homePageAction;
+    private UserRegisterPageAction registerAction;
+    private UserCommonPageAction commonPageAction;
+    private UserLoginPageAction loginPageAction;
+    private UserMyAccountPageAction myAccountPageAction;
+    private UserAddressPageAction addressPageAction;
+    private UserCustomInforPageAction customInforPageAction;
+    private UserMyProductReiewsPageAction myProductReiewsPageAction;
+    private UserRewardPointsPageAction rewardPointsPageAction;
     private String emailAddress;
     private String firstName, lastName, password ="";
 
@@ -37,11 +38,8 @@ public class Level_04_SwitchPage extends BasePage {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
-        homePageAction = PageGeneratorManager.getHomePageAction(driver);
-        commonPageAction = PageGeneratorManager.getCommonPageAction(driver);
-        registerAction = PageGeneratorManager.getRegisterPageAction(driver);
-        loginPageAction = PageGeneratorManager.getLoginPageAction(driver);
-        myAccountPageAction = PageGeneratorManager.getMyAccountPageAction(driver);
+        homePageAction = PageGeneratorManager.getUserHomePage(driver);
+        commonPageAction = PageGeneratorManager.getUserCommonPage(driver);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -51,13 +49,13 @@ public class Level_04_SwitchPage extends BasePage {
         lastName = "FC";
         password = "123456";
 
-        driver.get("https://demo.nopcommerce.com/");
+        driver.get(GlobalConstants.PORTAL_PAGE_URL);
 
     }
 
     @Test
     public void User_01_Register(){
-        homePageAction.clickToRegisterLink();
+        registerAction = homePageAction.openRegisterPage();
 
         System.out.println("Register page - Step 2: Input to required fields");
         registerAction.inputToTextbox("First name",firstName);
@@ -77,14 +75,19 @@ public class Level_04_SwitchPage extends BasePage {
     public void User_02_Open_LoginPage(){
         System.out.println("Register page - Step 1: Click to 'Log in' link");
         commonPageAction.validateHeaderLinkIsDisplayed("Log in");
-        registerAction.clickOnLoginLink();
-        loginPageAction.loginHighLevel(emailAddress,password);
+        registerAction = PageGeneratorManager.getUserRegisterPage(driver);
+        loginPageAction =  registerAction.clickOnLoginLink();
+        loginPageAction.loginAsUser(emailAddress,password);
     }
 
     @Test
     public void User_03_Open_MyAccountPage(){
-        homePageAction.clickOnMyAccountLink();
+        myAccountPageAction = homePageAction.openMyAccountPage();
         myAccountPageAction.validateTitleOfMyAccountPage("My account - Customer info");
+
+        addressPageAction = myAccountPageAction.openAddressPage(driver,"Addresses");
+        customInforPageAction = addressPageAction.openCustomInforPage(driver,"Customer info");
+        myProductReiewsPageAction = customInforPageAction.openMyProductReviewsPageAction(driver,"My product reviews");
     }
     @AfterClass
     public  void closeBrowser(){

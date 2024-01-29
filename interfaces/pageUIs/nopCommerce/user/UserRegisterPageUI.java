@@ -1,6 +1,6 @@
-package pageUIs;
+package interfaces.pageUIs.nopCommerce.user;
 
-public class RegisterPageUI {
+public class UserRegisterPageUI {
 
      public static final  String REGISTER_BUTTON = "//div[@class='buttons']//button[contains(text(),'%s')]";
     public static final String ERROR_MESSAGE = "//div[@class='inputs']//span[@id='%s-error']";

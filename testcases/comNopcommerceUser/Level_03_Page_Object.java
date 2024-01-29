@@ -1,7 +1,7 @@
 package comNopcommerceUser;
 
 import actions.commons.PageGeneratorManager;
-import actions.pageAction.LoginPageAction;
+import actions.pageObjects.nopCommerce.user.UserLoginPageAction;
 import commons.BasePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageAction.HomePageAction;
-import pageAction.RegisterPageAction;
+import actions.pageObjects.nopCommerce.user.UserHomePageAction;
+import actions.pageObjects.nopCommerce.user.UserRegisterPageAction;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -21,9 +21,9 @@ public class Level_03_Page_Object extends BasePage {
 
     private WebDriver driver;
 //    String projectPath = System.getProperty("user.dir");
-    private HomePageAction homePageAction;
-    private RegisterPageAction registerAction;
-    private LoginPageAction loginPageAction;
+    private UserHomePageAction homePageAction;
+    private UserRegisterPageAction registerAction;
+    private UserLoginPageAction loginPageAction;
     private String emailAddress;
     private String firstName, lastName, password ="";
 
@@ -33,7 +33,7 @@ public class Level_03_Page_Object extends BasePage {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
-        homePageAction = PageGeneratorManager.getHomePageAction(driver);
+        homePageAction = PageGeneratorManager.getUserHomePage(driver);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

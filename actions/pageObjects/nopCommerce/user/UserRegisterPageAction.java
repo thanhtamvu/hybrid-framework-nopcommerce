@@ -1,26 +1,25 @@
-package pageAction;
+package actions.pageObjects.nopCommerce.user;
 
 import actions.commons.PageGeneratorManager;
-import actions.pageAction.LoginPageAction;
 import commons.BasePage;
 import commons.GetPropertiesValue;
 import org.openqa.selenium.WebDriver;
-import pageUIs.RegisterPageUI;
+import interfaces.pageUIs.nopCommerce.user.UserRegisterPageUI;
 
-public class RegisterPageAction extends BasePage {
+public class UserRegisterPageAction extends BasePage {
 
     private WebDriver driver;
 
-        public RegisterPageAction(WebDriver driver){
+        public UserRegisterPageAction(WebDriver driver){
         this.driver = driver;
     }
 
-    public RegisterPageAction clickToRegisterButton() {
+    public UserRegisterPageAction clickToRegisterButton() {
         String button = GetPropertiesValue.getObjectRepository("RegisterPage", "REGISTER_BUTTON");
-        String xpath = String.format(RegisterPageUI.REGISTER_BUTTON, button);
+        String xpath = String.format(UserRegisterPageUI.REGISTER_BUTTON, button);
         waitForElementClickable(driver, xpath);
         clickToElement(driver, xpath);
-        return PageGeneratorManager.getRegisterPageAction(driver);
+        return PageGeneratorManager.getUserRegisterPage(driver);
     }
 
     public String getErrorMessageUnderTextArea(String errorMessageType) {
@@ -33,15 +32,15 @@ public class RegisterPageAction extends BasePage {
     private String translateErrorMessageXpath(String typeOfField){
             String xpath ="";
             if(typeOfField.equalsIgnoreCase("FirstName")){
-                xpath = String.format(RegisterPageUI.ERROR_MESSAGE,"FirstName");
+                xpath = String.format(UserRegisterPageUI.ERROR_MESSAGE,"FirstName");
             } else if(typeOfField.equalsIgnoreCase("LastName")){
-                xpath = String.format(RegisterPageUI.ERROR_MESSAGE,"LastName");
+                xpath = String.format(UserRegisterPageUI.ERROR_MESSAGE,"LastName");
             } else if(typeOfField.equalsIgnoreCase("Email")){
-                xpath = String.format(RegisterPageUI.ERROR_MESSAGE,"Email");
+                xpath = String.format(UserRegisterPageUI.ERROR_MESSAGE,"Email");
             } else if(typeOfField.equalsIgnoreCase("Password")){
-                xpath = String.format(RegisterPageUI.ERROR_MESSAGE,"Password");
+                xpath = String.format(UserRegisterPageUI.ERROR_MESSAGE,"Password");
             } else if(typeOfField.equalsIgnoreCase("ConfirmPassword")){
-                xpath = String.format(RegisterPageUI.ERROR_MESSAGE,"ConfirmPassword");
+                xpath = String.format(UserRegisterPageUI.ERROR_MESSAGE,"ConfirmPassword");
             }
             return xpath;
     }
@@ -66,51 +65,51 @@ public class RegisterPageAction extends BasePage {
     public void inputToTextbox(String typeOfTextbox, String text) {
             String xpath = "";
             if (typeOfTextbox.equalsIgnoreCase("First name")){
-                xpath = String.format(RegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"FirstName");
+                xpath = String.format(UserRegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"FirstName");
             } else if (typeOfTextbox.equalsIgnoreCase("Last name")){
-                xpath = String.format(RegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"LastName");
+                xpath = String.format(UserRegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"LastName");
             } else if (typeOfTextbox.equalsIgnoreCase("Email")){
-                xpath = String.format(RegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"Email");
+                xpath = String.format(UserRegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"Email");
             } else if (typeOfTextbox.equalsIgnoreCase("Password")){
-                xpath = String.format(RegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"Password");
+                xpath = String.format(UserRegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"Password");
             } else if (typeOfTextbox.equalsIgnoreCase("Confirm password")){
-                xpath = String.format(RegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"ConfirmPassword");
+                xpath = String.format(UserRegisterPageUI.TEXTAERA_EMAIL_PASSWORD_TYPE,"ConfirmPassword");
             }
             waitForElementVisible(driver,xpath);
             inputToElement(driver,xpath,text);
     }
 
     public String getRegisterSuccessMessage() {
-            String xpath = RegisterPageUI.REGISTER_SUCCESS_MESSAGE;
+            String xpath = UserRegisterPageUI.REGISTER_SUCCESS_MESSAGE;
             waitForElementVisible(driver,xpath);
         return getElementText(driver,xpath);
     }
 
     public void clickToRegisterLink() {
         String button = GetPropertiesValue.getObjectRepository("RegisterPage", "REGISTER_BUTTON");
-        String xpath = String.format(RegisterPageUI.HEADER_LINK,button);
+        String xpath = String.format(UserRegisterPageUI.HEADER_LINK,button);
         waitForElementClickable(driver,xpath);
         clickToElement(driver,xpath);
     }
 
     public String getErrorExistingEmailMessage() {
-        String xpath = RegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE;
+        String xpath = UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE;
         waitForElementVisible(driver,xpath);
         return getElementText(driver,xpath);
     }
 
-    public pageAction.HomePageAction clickOnLogOutLink(){
-            String xpath = RegisterPageUI.HEADER_LINK;
+    public UserHomePageAction clickOnLogOutLink(){
+            String xpath = UserRegisterPageUI.HEADER_LINK;
             waitForElementClickable(driver,xpath,"Log out");
             clickToElement(driver,xpath,"Log out");
-            return PageGeneratorManager.getHomePageAction(driver);
+            return PageGeneratorManager.getUserHomePage(driver);
     }
 
-    public LoginPageAction clickOnLoginLink(){
-            String xpath = RegisterPageUI.HEADER_LINK;
+    public UserLoginPageAction clickOnLoginLink(){
+            String xpath = UserRegisterPageUI.HEADER_LINK;
             waitForElementClickable(driver,xpath,"Log in");
             clickToElement(driver,xpath,"Log in");
-            return PageGeneratorManager.getLoginPageAction(driver);
+            return PageGeneratorManager.getUserLoginPage(driver);
     }
 
 }

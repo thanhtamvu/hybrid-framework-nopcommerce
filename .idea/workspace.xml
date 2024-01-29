@@ -5,15 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bd6a04b-be20-4a2b-8fc3-8c722adae6f5" name="Changes" comment="Resolve conflict">
-      <change afterPath="$PROJECT_DIR$/actions/commons/Generic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/commons/GetPropertiesValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/comNopCommercesData/RegisterPage.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/admin/AdminLoginPageAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserAddressPageAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserCustomInforPageAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserMyProductReiewsPageAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserRewardPointsPageAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/admin/AdminLoginPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_05_Switch_Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageAction/HomePageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageAction/HomePageAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageAction/RegisterPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageAction/RegisterPageAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/GetPropertiesValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/GetPropertiesValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/PageGeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/CommonPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserCommonPageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/HomePageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserHomePageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/LoginPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserLoginPageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/MyAccountPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserMyAccountPageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageAction/RegisterPageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopCommerce/user/UserRegisterPageAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserBasePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/CommonPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserCommonPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserHomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/LoginPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserLoginPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/MyAccountPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserMyAccountPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopCommerce/user/UserRegisterPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_03_Page_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_03_Page_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_04_SwitchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/comNopcommerceUser/Level_04_SwitchPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +45,29 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thanhtamvu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e82a9d70-9206-4f4b-b4f8-d7ced579ccc1" />
+        <option name="url" value="https://github.com/thanhtamvu/hybrid-framework-nopcommerce.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2VI0Y10MarXAkqdEQH1zSUHgMCE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,12 +76,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "D:/Selenium/test3/hybrid-framework-nopcommerce",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39770114",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce" />
@@ -54,30 +105,13 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Selenium\test3\hybrid-framework-nopcommerce\resouces" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="testcases.comNopcommerceUser" />
+      <recent name="actions.pageAction" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.Level_03_Page_Object.Register_01_Empty_Data">
-    <configuration name="Abc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Abc" />
-      <module name="hybrid-framework-nopcommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="comNopcommerceUser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Level_04_SwitchPage">
     <configuration name="GetPropertiesValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="commons.GetPropertiesValue" />
-      <module name="hybrid-framework-nopcommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="commons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,17 +127,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="aaa" type="JUnit" factoryName="JUnit" />
     <configuration name="Level_01_Register_DRY" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="PATTERN" value="actions.commons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="actions.commons" />
+      <option name="MAIN_CLASS_NAME" value="actions.commons.test1" />
+      <option name="METHOD_NAME" value="customRadio" />
+      <option name="TEST_OBJECT" value="method" />
       <properties />
       <listeners />
       <method v="2">
@@ -111,17 +147,7 @@
       </method>
     </configuration>
     <configuration name="Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-nopcommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="comNopcommerceUser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_01_Register_DRY" />
-      <option name="METHOD_NAME" value="TC_03_Register_Password_Less_Than_6_Chars" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -129,17 +155,24 @@
       </method>
     </configuration>
     <configuration name="Level_03_Page_Object.Register_01_Empty_Data" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_04_SwitchPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="comNopcommerceUser.*" />
+          <option name="PATTERN" value="testcases.comNopcommerceUser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="comNopcommerceUser" />
-      <option name="MAIN_CLASS_NAME" value="comNopcommerceUser.Level_03_Page_Object" />
-      <option name="METHOD_NAME" value="Register_01_Empty_Data" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="testcases.comNopcommerceUser" />
+      <option name="MAIN_CLASS_NAME" value="testcases.comNopcommerceUser.Level_04_SwitchPage" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -148,17 +181,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.GetPropertiesValue" />
-      <item itemvalue="Application.Abc" />
       <item itemvalue="JUnit.aaa" />
+      <item itemvalue="TestNG.Level_04_SwitchPage" />
       <item itemvalue="TestNG.Level_03_Page_Object.Register_01_Empty_Data" />
       <item itemvalue="TestNG.Level_01_Register_DRY" />
       <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Level_04_SwitchPage" />
         <item itemvalue="TestNG.Level_03_Page_Object.Register_01_Empty_Data" />
         <item itemvalue="Application.GetPropertiesValue" />
-        <item itemvalue="Application.Abc" />
         <item itemvalue="TestNG.Level_01_Register_DRY" />
         <item itemvalue="TestNG.Level_01_Register_DRY.TC_03_Register_Password_Less_Than_6_Chars" />
       </list>
@@ -172,22 +205,74 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694508333377</updated>
+      <workItem from="1695051627344" duration="1117000" />
+      <workItem from="1695052864126" duration="10000" />
+      <workItem from="1695312627705" duration="1893000" />
+      <workItem from="1695651718050" duration="1339000" />
+      <workItem from="1695744375117" duration="1094000" />
+      <workItem from="1695825007688" duration="2180000" />
+      <workItem from="1695830941880" duration="107000" />
+      <workItem from="1695916828308" duration="1665000" />
+      <workItem from="1695918510980" duration="10000" />
+      <workItem from="1695946337296" duration="4582000" />
+      <workItem from="1696257281785" duration="407000" />
+      <workItem from="1696257703741" duration="269000" />
+      <workItem from="1696379407835" duration="2595000" />
+      <workItem from="1696465179656" duration="4184000" />
+      <workItem from="1696551714557" duration="600000" />
+      <workItem from="1696663499193" duration="13189000" />
+      <workItem from="1696693174345" duration="2483000" />
+      <workItem from="1696758503715" duration="996000" />
+      <workItem from="1697070668658" duration="2775000" />
+      <workItem from="1697378308953" duration="1821000" />
+      <workItem from="1697462740880" duration="1735000" />
+      <workItem from="1697871440348" duration="69000" />
+      <workItem from="1697871519897" duration="79000" />
+      <workItem from="1699887545590" duration="1695000" />
+      <workItem from="1700493195802" duration="4000" />
+      <workItem from="1706065157054" duration="31000" />
+      <workItem from="1706512883521" duration="1524000" />
     </task>
-    <task id="LOCAL-00001" summary="Resolve conflict">
-      <created>1703046051091</created>
+    <task id="LOCAL-00001" summary="BasePage">
+      <option name="closed" value="true" />
+      <created>1696257810316</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1703046051091</updated>
+      <updated>1696257810316</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="BasePage">
+      <option name="closed" value="true" />
+      <created>1696257882752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696257882752</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="BasePage" />
     <MESSAGE value="Resolve conflict" />
     <option name="LAST_COMMIT_MESSAGE" value="Resolve conflict" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/actions/commons/test1.java</url>
+          <line>126</line>
+          <properties class="actions.commons.test1">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

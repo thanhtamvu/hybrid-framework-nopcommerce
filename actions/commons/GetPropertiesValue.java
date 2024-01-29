@@ -1,4 +1,4 @@
-package commons;
+package actions.commons;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

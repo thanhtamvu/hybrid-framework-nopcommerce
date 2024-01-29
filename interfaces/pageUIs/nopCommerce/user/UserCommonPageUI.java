@@ -1,6 +1,6 @@
-package interfaces.pageUIs;
+package interfaces.pageUIs.nopCommerce.user;
 
-public class CommonPageUI {
+public class UserCommonPageUI {
     public static final String HEADER_LINK = "//div[contains(@class,'header-links-wrapper')]//a[text()='%s']";
 
 

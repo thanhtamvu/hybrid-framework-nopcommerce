@@ -1,6 +1,11 @@
 package commons;
 
-import interfaces.pageUIs.BasePageUI;
+import actions.commons.PageGeneratorManager;
+import actions.pageObjects.nopCommerce.user.UserAddressPageAction;
+import actions.pageObjects.nopCommerce.user.UserCustomInforPageAction;
+import actions.pageObjects.nopCommerce.user.UserMyProductReiewsPageAction;
+import actions.pageObjects.nopCommerce.user.UserRewardPointsPageAction;
+import interfaces.pageUIs.nopCommerce.user.UserBasePageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -400,11 +405,31 @@ public class BasePage {
         return by;
     }
 
-    public void openPagesAtMyAccountByName(WebDriver driver, String xpathLocator, String pageName){
-        waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
-        clickToElement(driver,BasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
+    public UserAddressPageAction openAddressPage(WebDriver driver, String pageName){
+        String xpath = UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA;
+        waitForElementClickable(driver, xpath,pageName);
+        clickToElement(driver, UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
+        return PageGeneratorManager.getUserAddressPage(driver);
     }
 
+    public UserCustomInforPageAction openCustomInforPage(WebDriver driver, String pageName){
+        String xpath = UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA;
+        waitForElementClickable(driver, xpath,pageName);
+        clickToElement(driver, UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
+        return PageGeneratorManager.getUserCustomPage(driver) ;
+    }
 
+    public UserRewardPointsPageAction openRewardPointsPageInforPage(WebDriver driver, String pageName){
+        String xpath = UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA;
+        waitForElementClickable(driver, xpath,pageName);
+        clickToElement(driver, UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
+        return PageGeneratorManager.getUserRewardPointsPage(driver) ;
+    }
 
+    public UserMyProductReiewsPageAction openMyProductReviewsPageAction(WebDriver driver, String pageName){
+        String xpath = UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA;
+        waitForElementClickable(driver, xpath,pageName);
+        clickToElement(driver, UserBasePageUI.DYNAMIC_PAGES_AT_MY_ACCOUNT_AREA,pageName);
+        return PageGeneratorManager.getUserMyProductReiewsPage(driver) ;
+    }
 }

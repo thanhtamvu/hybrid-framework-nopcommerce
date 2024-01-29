@@ -1,5 +1,5 @@
-package interfaces.pageUIs;
+package interfaces.pageUIs.nopCommerce.user;
 
-public class MyAccountPageUI {
+public class UserMyAccountPageUI {
     public static final String MY_ACCOUNT_TITLE = "//div[contains(@class,'page-title')]/h1";
 }
